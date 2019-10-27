@@ -1,0 +1,441 @@
+<html>
+<body>
+<pre>
+<h1>µVision Build Log</h1>
+<h2>Project:</h2>
+D:\51ÎÄ¼þ¼Ð\6\test.uvproj
+Project File Date:  10/26/2019
+
+<h2>Output:</h2>
+Build target 'Target 1'
+compiling test.c...
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?AD9850_RESET?TEST
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?AD9850_RESET_SERIAL?TEST
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_AD9850_WR_PARREL?TEST
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_AD9850_WR_SERIAL?TEST
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?KEYSCAN?TEST
+Program Size: data=39.0 xdata=0 code=1445
+creating hex file from "test"...
+"test" - 0 Error(s), 5 Warning(s).
+Build target 'Target 1'
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?AD9850_RESET?TEST
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?AD9850_RESET_SERIAL?TEST
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_AD9850_WR_PARREL?TEST
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_AD9850_WR_SERIAL?TEST
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?KEYSCAN?TEST
+Program Size: data=39.0 xdata=0 code=1445
+creating hex file from "test"...
+"test" - 0 Error(s), 5 Warning(s).
+Build target 'Target 1'
+compiling test.c...
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?AD9850_RESET?TEST
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?AD9850_RESET_SERIAL?TEST
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_AD9850_WR_PARREL?TEST
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_AD9850_WR_SERIAL?TEST
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?KEYSCAN?TEST
+Program Size: data=39.0 xdata=0 code=1445
+creating hex file from "test"...
+"test" - 0 Error(s), 5 Warning(s).
+Build target 'Target 1'
+compiling test.c...
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?AD9850_RESET?TEST
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?AD9850_RESET_SERIAL?TEST
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_AD9850_WR_PARREL?TEST
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_AD9850_WR_SERIAL?TEST
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?KEYSCAN?TEST
+*** ERROR L107: ADDRESS SPACE OVERFLOW
+    SPACE:   DATA    
+    SEGMENT: ?DT?_AD9850_WR_SERIAL?TEST
+    LENGTH:  000DH
+*** ERROR L105: PUBLIC REFERS TO IGNORED SEGMENT
+    SYMBOL:  ?_AD9850_WR_SERIAL?BYTE
+    SEGMENT: ?DT?_AD9850_WR_SERIAL?TEST
+Program Size: data=139.0 xdata=0 code=1445
+Target not created
+compiling test.c...
+test.c - 0 Error(s), 0 Warning(s).
+Build target 'Target 1'
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?AD9850_RESET?TEST
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?AD9850_RESET_SERIAL?TEST
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_AD9850_WR_PARREL?TEST
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_AD9850_WR_SERIAL?TEST
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?KEYSCAN?TEST
+*** ERROR L107: ADDRESS SPACE OVERFLOW
+    SPACE:   DATA    
+    SEGMENT: ?DT?_AD9850_WR_SERIAL?TEST
+    LENGTH:  000DH
+*** ERROR L105: PUBLIC REFERS TO IGNORED SEGMENT
+    SYMBOL:  ?_AD9850_WR_SERIAL?BYTE
+    SEGMENT: ?DT?_AD9850_WR_SERIAL?TEST
+Program Size: data=139.0 xdata=0 code=1445
+Target not created
+compiling test.c...
+test.c - 0 Error(s), 0 Warning(s).
+Build target 'Target 1'
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?AD9850_RESET?TEST
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?AD9850_RESET_SERIAL?TEST
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_AD9850_WR_PARREL?TEST
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_AD9850_WR_SERIAL?TEST
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?KEYSCAN?TEST
+Program Size: data=49.0 xdata=0 code=1445
+creating hex file from "test"...
+"test" - 0 Error(s), 5 Warning(s).
+compiling test.c...
+test.c - 0 Error(s), 0 Warning(s).
+Build target 'Target 1'
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?AD9850_RESET?TEST
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?AD9850_RESET_SERIAL?TEST
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_AD9850_WR_PARREL?TEST
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_AD9850_WR_SERIAL?TEST
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?KEYSCAN?TEST
+Program Size: data=49.0 xdata=0 code=1445
+creating hex file from "test"...
+"test" - 0 Error(s), 5 Warning(s).
+compiling test.c...
+test.c - 0 Error(s), 0 Warning(s).
+Build target 'Target 1'
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?AD9850_RESET?TEST
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?AD9850_RESET_SERIAL?TEST
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_AD9850_WR_PARREL?TEST
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_AD9850_WR_SERIAL?TEST
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?KEYSCAN?TEST
+Program Size: data=49.0 xdata=0 code=1445
+creating hex file from "test"...
+"test" - 0 Error(s), 5 Warning(s).
+compiling test.c...
+test.c - 0 Error(s), 0 Warning(s).
+Build target 'Target 1'
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?AD9850_RESET?TEST
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?AD9850_RESET_SERIAL?TEST
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_AD9850_WR_PARREL?TEST
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_AD9850_WR_SERIAL?TEST
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?KEYSCAN?TEST
+Program Size: data=49.0 xdata=0 code=1445
+creating hex file from "test"...
+"test" - 0 Error(s), 5 Warning(s).
+compiling test.c...
+TEST.C(204): warning C206: 'Display2rd': missing function-prototype
+test.c - 0 Error(s), 1 Warning(s).
+Build target 'Target 1'
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?AD9850_RESET?TEST
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?AD9850_RESET_SERIAL?TEST
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_AD9850_WR_PARREL?TEST
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_AD9850_WR_SERIAL?TEST
+*** WARNING L1: UNRESOLVED EXTERNAL SYMBOL
+    SYMBOL:  DISPLAY2RD
+    MODULE:  test.obj (TEST)
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  DISPLAY2RD
+    MODULE:  test.obj (TEST)
+    ADDRESS: 057AH
+Program Size: data=49.0 xdata=0 code=1451
+creating hex file from "test"...
+"test" - 0 Error(s), 6 Warning(s).
+compiling test.c...
+test.c - 0 Error(s), 0 Warning(s).
+Build target 'Target 1'
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?AD9850_RESET?TEST
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?AD9850_RESET_SERIAL?TEST
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_AD9850_WR_PARREL?TEST
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_AD9850_WR_SERIAL?TEST
+Program Size: data=49.0 xdata=0 code=1487
+creating hex file from "test"...
+"test" - 0 Error(s), 4 Warning(s).
+compiling test.c...
+test.c - 0 Error(s), 0 Warning(s).
+Build target 'Target 1'
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?AD9850_RESET?TEST
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?AD9850_RESET_SERIAL?TEST
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_AD9850_WR_PARREL?TEST
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_AD9850_WR_SERIAL?TEST
+Program Size: data=49.0 xdata=0 code=1487
+creating hex file from "test"...
+"test" - 0 Error(s), 4 Warning(s).
+compiling test.c...
+TEST.C(165): warning C214: 'Argument': conversion: pointer to non-pointer
+test.c - 0 Error(s), 1 Warning(s).
+Build target 'Target 1'
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?AD9850_RESET?TEST
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?AD9850_RESET_SERIAL?TEST
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_AD9850_WR_PARREL?TEST
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_AD9850_WR_SERIAL?TEST
+Program Size: data=49.0 xdata=0 code=1484
+creating hex file from "test"...
+"test" - 0 Error(s), 4 Warning(s).
+Build target 'Target 1'
+compiling test.c...
+TEST.C(165): warning C214: 'Argument': conversion: pointer to non-pointer
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?AD9850_RESET?TEST
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?AD9850_RESET_SERIAL?TEST
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_AD9850_WR_PARREL?TEST
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_AD9850_WR_SERIAL?TEST
+Program Size: data=49.0 xdata=0 code=1484
+creating hex file from "test"...
+"test" - 0 Error(s), 5 Warning(s).
+compiling test.c...
+test.c - 0 Error(s), 0 Warning(s).
+compiling test.c...
+TEST.C(155): warning C206: 'LcdWriteCom': missing function-prototype
+TEST.C(155): error C267: 'LcdWriteCom': requires ANSI-style prototype
+test.c - 1 Error(s), 1 Warning(s).
+Build target 'Target 1'
+compiling test.c...
+TEST.C(155): warning C206: 'LcdWriteCom': missing function-prototype
+TEST.C(155): error C267: 'LcdWriteCom': requires ANSI-style prototype
+Target not created
+compiling test.c...
+TEST.C(156): warning C206: 'lcdWriteData': missing function-prototype
+TEST.C(156): error C267: 'lcdWriteData': requires ANSI-style prototype
+test.c - 1 Error(s), 1 Warning(s).
+compiling test.c...
+test.c - 0 Error(s), 0 Warning(s).
+Build target 'Target 1'
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?AD9850_RESET?TEST
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?AD9850_RESET_SERIAL?TEST
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_AD9850_WR_PARREL?TEST
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_AD9850_WR_SERIAL?TEST
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?DISPLAY2RD?TEST
+Program Size: data=47.0 xdata=0 code=1559
+creating hex file from "test"...
+"test" - 0 Error(s), 5 Warning(s).
+compiling test.c...
+test.c - 0 Error(s), 0 Warning(s).
+Build target 'Target 1'
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?AD9850_RESET?TEST
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_AD9850_WR_PARREL?TEST
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?DISPLAY2RD?TEST
+Program Size: data=45.0 xdata=0 code=1645
+creating hex file from "test"...
+"test" - 0 Error(s), 3 Warning(s).
+compiling test.c...
+test.c - 0 Error(s), 0 Warning(s).
+Build target 'Target 1'
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?AD9850_RESET?TEST
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_AD9850_WR_PARREL?TEST
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?DISPLAY2RD?TEST
+Program Size: data=45.0 xdata=0 code=1645
+creating hex file from "test"...
+"test" - 0 Error(s), 3 Warning(s).
+compiling test.c...
+TEST.C(151): error C141: syntax error near 'int'
+TEST.C(151): error C202: 'k': undefined identifier
+TEST.C(151): error C202: 'k': undefined identifier
+TEST.C(151): error C202: 'k': undefined identifier
+TEST.C(151): error C141: syntax error near ')'
+TEST.C(154): error C141: syntax error near 'FValue'
+TEST.C(191): error C141: syntax error near '\'
+TEST.C(194): error C141: syntax error near '\'
+test.c - 8 Error(s), 0 Warning(s).
+Build target 'Target 1'
+compiling test.c...
+TEST.C(151): error C141: syntax error near 'int'
+TEST.C(151): error C202: 'k': undefined identifier
+TEST.C(151): error C202: 'k': undefined identifier
+TEST.C(151): error C202: 'k': undefined identifier
+TEST.C(151): error C141: syntax error near ')'
+TEST.C(154): error C141: syntax error near 'FValue'
+TEST.C(191): error C141: syntax error near '\'
+TEST.C(194): error C141: syntax error near '\'
+Target not created
+compiling test.c...
+TEST.C(151): error C141: syntax error near 'unsigned'
+TEST.C(151): error C202: 'k': undefined identifier
+TEST.C(151): error C202: 'k': undefined identifier
+TEST.C(151): error C202: 'k': undefined identifier
+TEST.C(151): error C141: syntax error near ')'
+TEST.C(154): error C141: syntax error near 'FValue'
+TEST.C(191): error C141: syntax error near '\'
+TEST.C(194): error C141: syntax error near '\'
+test.c - 8 Error(s), 0 Warning(s).
+Build target 'Target 1'
+compiling test.c...
+TEST.C(151): error C141: syntax error near 'unsigned'
+TEST.C(151): error C202: 'k': undefined identifier
+TEST.C(151): error C202: 'k': undefined identifier
+TEST.C(151): error C202: 'k': undefined identifier
+TEST.C(151): error C141: syntax error near ')'
+TEST.C(154): error C141: syntax error near 'FValue'
+TEST.C(191): error C141: syntax error near '\'
+TEST.C(194): error C141: syntax error near '\'
+Target not created
+compiling test.c...
+TEST.C(191): error C141: syntax error near '\'
+TEST.C(194): error C141: syntax error near '\'
+test.c - 2 Error(s), 0 Warning(s).
+Build target 'Target 1'
+compiling test.c...
+TEST.C(191): error C141: syntax error near '\'
+TEST.C(194): error C141: syntax error near '\'
+Target not created
+compiling test.c...
+TEST.C(190): error C141: syntax error near '\'
+TEST.C(193): error C141: syntax error near '\'
+test.c - 2 Error(s), 0 Warning(s).
+Build target 'Target 1'
+compiling test.c...
+TEST.C(190): error C141: syntax error near '\'
+TEST.C(193): error C141: syntax error near '\'
+Target not created
+compiling test.c...
+TEST.C(191): error C141: syntax error near '\'
+TEST.C(194): error C141: syntax error near '\'
+test.c - 2 Error(s), 0 Warning(s).
+Build target 'Target 1'
+compiling test.c...
+TEST.C(191): error C141: syntax error near '\'
+TEST.C(194): error C141: syntax error near '\'
+Target not created
+compiling test.c...
+TEST.C(241): warning C206: 'ChangeNum': missing function-prototype
+test.c - 0 Error(s), 1 Warning(s).
+Build target 'Target 1'
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?AD9850_RESET?TEST
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_AD9850_WR_PARREL?TEST
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?KEYSCAN?TEST
+*** WARNING L1: UNRESOLVED EXTERNAL SYMBOL
+    SYMBOL:  CHANGENUM
+    MODULE:  test.obj (TEST)
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  CHANGENUM
+    MODULE:  test.obj (TEST)
+    ADDRESS: 064AH
+Program Size: data=39.0 xdata=0 code=1731
+creating hex file from "test"...
+"test" - 0 Error(s), 5 Warning(s).
+compiling test.c...
+test.c - 0 Error(s), 0 Warning(s).
+Build target 'Target 1'
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?AD9850_RESET?TEST
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_AD9850_WR_PARREL?TEST
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?KEYSCAN?TEST
+Program Size: data=39.0 xdata=0 code=1728
+creating hex file from "test"...
+"test" - 0 Error(s), 3 Warning(s).
+Build target 'Target 1'
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?AD9850_RESET?TEST
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_AD9850_WR_PARREL?TEST
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?KEYSCAN?TEST
+Program Size: data=39.0 xdata=0 code=1728
+creating hex file from "test"...
+"test" - 0 Error(s), 3 Warning(s).
+compiling test.c...
+TEST.C(249): warning C206: 'Display2': missing function-prototype
+test.c - 0 Error(s), 1 Warning(s).
+Build target 'Target 1'
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?AD9850_RESET?TEST
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_AD9850_WR_PARREL?TEST
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?DISPLAY3?TEST
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?KEYSCAN?TEST
+Program Size: data=39.0 xdata=0 code=1767
+creating hex file from "test"...
+"test" - 0 Error(s), 4 Warning(s).

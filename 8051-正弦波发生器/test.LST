@@ -1,0 +1,293 @@
+C51 COMPILER V9.60.0.0   TEST                                                              10/27/2019 18:51:42 PAGE 1   
+
+
+C51 COMPILER V9.60.0.0, COMPILATION OF MODULE TEST
+OBJECT MODULE PLACED IN .\HEX\test.obj
+COMPILER INVOKED BY: F:\Keil_v5\C51\BIN\C51.EXE test.c OPTIMIZE(8,SPEED) BROWSE DEBUG OBJECTEXTEND TABS(2) OBJECT(.\HEX\
+                    -test.obj)
+
+line level    source
+
+   1          #include <reg52.h>
+   2          #include <stdio.h>
+   3          #include <intrins.h>
+   4          #include <lcd.h>
+   5          #include <math.h>
+   6          sbit ad9850_w_clk    =P2^2;  //P2.2口接ad9850的w_clk脚/PIN7
+   7          sbit ad9850_fq_up    =P2^1;  //P2.1口接ad9850的fq_up脚/PIN8
+   8          sbit ad9850_rest     =P2^0;  //P2.0口接ad9850的rest脚/PIN12
+   9          sbit ad9850_bit_data =P1^7;  //P1.7口接ad9850的D7脚/PIN25
+  10          sbit Key1 = P3^1;
+  11          sbit Key2 = P3^0;
+  12          uchar code table[]="Frequency:MHz";
+  13          uchar err[]="ERROR";
+  14          int FValue = 0,temp = 0;
+  15          int num = 0;
+  16          void checkK1();
+  17          void checkK2();
+  18          //P1为8位数据口
+  19          //***************************************************//
+  20          //              ad9850复位(并口模式)                 //
+  21          //---------------------------------------------------//
+  22          void init(){
+  23   1        num = 0;
+  24   1      }
+  25          void ad9850_reset()
+  26          {
+  27   1      ad9850_w_clk=0;
+  28   1      ad9850_fq_up=0;
+  29   1      //rest信号
+  30   1      ad9850_rest=0;
+  31   1      ad9850_rest=1;
+  32   1      ad9850_rest=0;
+  33   1      }
+  34          //***************************************************//
+  35          //              ad9850复位(并口模式)                 //
+  36          //---------------------------------------------------//
+  37          void ad9850_reset_serial()
+  38          {
+  39   1      ad9850_reset();
+  40   1      //w_clk信号
+  41   1      ad9850_w_clk=0;
+  42   1      ad9850_w_clk=1;
+  43   1      ad9850_w_clk=0;
+  44   1      //fq_up信号
+  45   1      ad9850_fq_up=0;
+  46   1      ad9850_fq_up=1;
+  47   1      ad9850_fq_up=0;
+  48   1      }
+  49          //***************************************************//
+  50          //          向ad9850中写命令与数据(并口)             //
+  51          //---------------------------------------------------//
+  52          void ad9850_wr_parrel(unsigned char w0,double frequence)
+  53          {
+  54   1      unsigned char w;
+C51 COMPILER V9.60.0.0   TEST                                                              10/27/2019 18:51:42 PAGE 2   
+
+  55   1      long int y;
+  56   1      double x;
+  57   1      //计算频率的HEX值
+  58   1      x=4294967295/125;//适合125M晶振
+  59   1      //如果时钟频率不为180MHZ，修改该处的频率值，单位MHz ！！！
+  60   1      frequence=frequence/1000000;
+  61   1      frequence=frequence*x;
+  62   1      y=frequence;
+  63   1      //写w0数据
+  64   1      w=w0;   
+  65   1      P1=w;      //w0
+  66   1      ad9850_w_clk=1;
+  67   1      ad9850_w_clk=0;
+  68   1      //写w1数据
+  69   1      w=(y>>24);
+  70   1      P1=w;      //w1
+  71   1      ad9850_w_clk=1;
+  72   1      ad9850_w_clk=0;
+  73   1      //写w2数据
+  74   1      w=(y>>16);
+  75   1      P1=w;      //w2
+  76   1      ad9850_w_clk=1;
+  77   1      ad9850_w_clk=0;
+  78   1      //写w3数据
+  79   1      w=(y>>8);
+  80   1      P1=w;      //w3
+  81   1      ad9850_w_clk=1;
+  82   1      ad9850_w_clk=0;
+  83   1      //写w4数据
+  84   1      w=(y>>=0);
+  85   1      P1=w;      //w4
+  86   1      ad9850_w_clk=1;
+  87   1      ad9850_w_clk=0;
+  88   1      //移入始能
+  89   1      ad9850_fq_up=1;
+  90   1      ad9850_fq_up=0;
+  91   1      }
+  92          //***************************************************//
+  93          //          向ad9850中写命令与数据(串口)             //
+  94          //---------------------------------------------------//
+  95          void ad9850_wr_serial(unsigned char w0,double frequence)
+  96          {
+  97   1      unsigned char i,w;
+  98   1      long int y;
+  99   1      double x;
+ 100   1      //计算频率的HEX值
+ 101   1      x=4294967295/125;//适合125M晶振
+ 102   1      //如果时钟频率不为180MHZ，修改该处的频率值，单位MHz  ！！！
+ 103   1      frequence=frequence/1000000;
+ 104   1      frequence=frequence*x;
+ 105   1      y=frequence;
+ 106   1      //写w4数据
+ 107   1      w=(y>>=0);
+ 108   1      for(i=0;i<8;i++)
+ 109   1      {
+ 110   2      ad9850_bit_data=(w>>i)&0x01;
+ 111   2      ad9850_w_clk=1;
+ 112   2      ad9850_w_clk=0;
+ 113   2      }
+ 114   1      //写w3数据
+ 115   1      w=(y>>8);
+ 116   1      for(i=0;i<8;i++)
+C51 COMPILER V9.60.0.0   TEST                                                              10/27/2019 18:51:42 PAGE 3   
+
+ 117   1      {
+ 118   2      ad9850_bit_data=(w>>i)&0x01;
+ 119   2      ad9850_w_clk=1;
+ 120   2      ad9850_w_clk=0;
+ 121   2      }
+ 122   1      //写w2数据
+ 123   1      w=(y>>16);
+ 124   1      for(i=0;i<8;i++)
+ 125   1      {
+ 126   2      ad9850_bit_data=(w>>i)&0x01;
+ 127   2      ad9850_w_clk=1;
+ 128   2      ad9850_w_clk=0;
+ 129   2      }
+ 130   1      //写w1数据
+ 131   1      w=(y>>24);
+ 132   1      for(i=0;i<8;i++)
+ 133   1      {
+ 134   2      ad9850_bit_data=(w>>i)&0x01;
+ 135   2      ad9850_w_clk=1;
+ 136   2      ad9850_w_clk=0;
+ 137   2      }
+ 138   1      //写w0数据
+ 139   1      w=w0;   
+ 140   1      for(i=0;i<8;i++)
+ 141   1      {
+ 142   2      ad9850_bit_data=(w>>i)&0x01;
+ 143   2      ad9850_w_clk=1;
+ 144   2      ad9850_w_clk=0;
+ 145   2      }
+ 146   1      //移入始能
+ 147   1      ad9850_fq_up=1;
+ 148   1      ad9850_fq_up=0;
+ 149   1      }
+ 150          
+ 151          void display()
+ 152          {
+ 153   1        uint i;
+ 154   1        lcdWriteCom(0x80+0x00);
+ 155   1        for(i=0;i<10;i++)
+ 156   1        {
+ 157   2          lcdWriteDate(table[i]);
+ 158   2        }
+ 159   1      }
+ 160          void display2()
+ 161          {
+ 162   1        uint i;
+ 163   1        lcdWriteCom(0xc0+0x08);
+ 164   1        for(i=10;i<13;i++)
+ 165   1        {
+ 166   2          lcdWriteDate(table[i]);
+ 167   2        }
+ 168   1      }
+ 169          void initFreq(){
+ 170   1        FValue = num;
+ 171   1      }
+ 172          void display3()
+ 173          {
+ 174   1        initFreq();
+ 175   1        lcdWriteCom(0xc0+0x04);
+ 176   1            temp = FValue/1000;
+ 177   1            FValue = FValue%1000;
+ 178   1        lcdWriteDate(temp+0x30);
+C51 COMPILER V9.60.0.0   TEST                                                              10/27/2019 18:51:42 PAGE 4   
+
+ 179   1        lcdWriteCom(0xc0+0x05);
+ 180   1            temp = FValue/100;
+ 181   1            FValue = FValue%100;
+ 182   1        lcdWriteDate(temp+0x30);
+ 183   1          lcdWriteCom(0xc0+0x06);
+ 184   1          temp = FValue/10;
+ 185   1          FValue = FValue%10;
+ 186   1        lcdWriteDate(temp+0x30);
+ 187   1          lcdWriteCom(0xc0+0x07);
+ 188   1        lcdWriteDate(FValue+0x30);    
+ 189   1      }
+ 190          void display4(){
+ 191   1        uint i;
+ 192   1        lcdInit();
+ 193   1        lcdWriteCom(0xc0+0x04);
+ 194   1        for(i=0;i<5;i++)
+ 195   1        {
+ 196   2          lcdWriteDate(err[i]);
+ 197   2        }
+ 198   1      }
+ 199          void error(){
+ 200   1        for(;;){
+ 201   2          ad9850_reset_serial();
+ 202   2          ad9850_wr_serial(0x00,num);
+ 203   2          display4();
+ 204   2        }
+ 205   1      }
+ 206          void delay(uint c)
+ 207          {
+ 208   1        uint a,b;
+ 209   1        for(;c>0;c--)
+ 210   1          for(b=199;b>0;b--)
+ 211   1            for(a=1;a>0;a--);
+ 212   1      }
+ 213          void initScan(){
+ 214   1          ad9850_reset_serial();
+ 215   1          ad9850_wr_serial(0x00,num);
+ 216   1          display();
+ 217   1          display3();
+ 218   1          display2();
+ 219   1      }
+ 220          void checkK1(){
+ 221   1        if(Key1==0)
+ 222   1        {
+ 223   2          //delay(10);
+ 224   2          num += 100;
+ 225   2        }
+ 226   1        else if(Key1 == 0){
+ 227   2          num = 0;
+ 228   2          checkK1();
+ 229   2        };
+ 230   1      }
+ 231          void checkK2(){
+ 232   1        if(Key2==0)
+ 233   1        {
+ 234   2          //delay(10);
+ 235   2          num -= 100;
+ 236   2        }
+ 237   1      }
+ 238          void KeyScan()
+ 239          {
+ 240   1        initScan();
+C51 COMPILER V9.60.0.0   TEST                                                              10/27/2019 18:51:42 PAGE 5   
+
+ 241   1        if(num >= 0 && num <= 9900){
+ 242   2          checkK1();
+ 243   2          checkK2();
+ 244   2        }
+ 245   1        else {
+ 246   2          error();
+ 247   2        }
+ 248   1      }
+ 249          void main()
+ 250          {
+ 251   1        init();
+ 252   1        lcdInit();
+ 253   1        for(;;){
+ 254   2          KeyScan();
+ 255   2        }
+ 256   1      }
+ 257          
+ 258          
+ 259          
+ 260          
+ 261          
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =    954    ----
+   CONSTANT SIZE    =     14    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =     12      32
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)
